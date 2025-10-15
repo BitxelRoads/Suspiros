@@ -1,0 +1,31 @@
+{
+  "name": "suspiros-pasteleria",
+  "version": "1.0.0",
+  "description": "Página web para Suspiros Pastelería Artesanal",
+  "main": "index.js",
+  "scripts": {
+    "watch:css": "tailwindcss -i ./src/input.css -o ./public/css/output.css --watch",
+    "serve": "live-server public",
+    "dev": "npm-run-all --parallel watch:css serve",
+    "build": "tailwindcss -i ./src/input.css -o ./public/css/output.css --minify",
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/css/output.css --minify"
+  },
+  "keywords": [
+    "pasteleria",
+    "tailwind",
+    "html"
+  ],
+  "author": "Tu Nombre",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "dependencies": {
+    "@midudev/tailwind-animations": "^0.2.0"
+  }
+}

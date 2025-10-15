@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suspiros Pastelería Artesanal - Horneamos Bellos Momentos</title>
+    <meta name="description" content="Pastelería artesanal hecha con amor. Tortas personalizadas, postres para diabéticos y para mascotas. Pedidos con 3 días de anticipación.">
+    
+    <!-- CSS Compilado de Tailwind -->
+    <link href="css/output.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (para el ícono de WhatsApp) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body class="bg-sus-cream font-sans text-sus-dark">
+
+    <!-- ===== HEADER Y NAVEGACIÓN ===== -->
+    <header id="header" class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="assets/logo.png" alt="Logo Suspiros Pastelería" class="h-12 w-12 animate-slide-in-left-subtle">
+                <span class="font-fancy text-2xl text-sus-dark animate-slide-in-left-subtle">Suspiros</span>
+            </a>
+            
+            <!-- Menú Desktop -->
+            <div class="hidden md:flex space-x-8 items-center animate-slide-in-right-subtle">
+                <a href="#historia" class="text-gray-700 hover:text-sus-pink transition">Nuestra Historia</a>
+                <a href="#productos" class="text-gray-700 hover:text-sus-pink transition">Productos</a>
+                <a href="#especiales" class="text-gray-700 hover:text-sus-pink transition">Líneas Especiales</a>
+                <a href="#galeria" class="text-gray-700 hover:text-sus-pink transition">Galería</a>
+                <a href="https://wa.me/573218191272?text=Hola!%20Quisiera%20hacer%20un%20pedido." target="_blank" class="bg-sus-blue text-white font-bold py-2 px-5 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105">
+                    Haz tu Pedido
+                </a>
+            </div>
+
+            <!-- Botón Menú Móvil -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-sus-dark focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden animate-slide-in-right-subtle bg-white/95 backdrop-blur-sm">
+            <a href="#historia" class="block py-2 px-6 text-sm text-gray-700 hover:bg-sus-pink/20">Nuestra Historia</a>
+            <a href="#productos" class="block py-2 px-6 text-sm text-gray-700 hover:bg-sus-pink/20">Productos</a>
+            <a href="#especiales" class="block py-2 px-6 text-sm text-gray-700 hover:bg-sus-pink/20">Líneas Especiales</a>
+            <a href="#galeria" class="block py-2 px-6 text-sm text-gray-700 hover:bg-sus-pink/20">Galería</a>
+            <a href="https://wa.me/573218191272?text=Hola!%20Quisiera%20hacer%20un%20pedido." target="_blank" class="block w-full text-left bg-sus-blue text-white font-bold py-3 px-6">
+                Haz tu Pedido
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== SECCIÓN HERO ===== -->   
+        <section class="relative h-screen flex items-center justify-center pt-20">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <img src="assets/background.png" alt="Torta artesanal decorada con flores" class="absolute inset-0 w-full h-full object-cover">
+            
+            <div class="relative z-10 text-center p-10 flex flex-col items-center bg-white/10 rounded-2xl backdrop-blur-sm">
+                <img src="assets/suspiros_letra.png" alt="Letra de Suspiros" class="drop-shadow-white-md animate-slide-in-left-subtle opacity-0 [animation-delay:0.2s]">
+                <p class="text-4xl md:text-4xl text-black mb-8 font-handwritten max-w-xl drop-shadow-white-md animate-slide-in-right-subtle opacity-0 [animation-delay:0.2s]">Donde cada detalle nace con amor y se transforma en momentos inolvidables.</p>
+                <a href="https://wa.me/573218191272?text=Hola!%20Quisiera%20hacer%20un%20pedido." target="_blank" class="bg-sus-pink text-sus-dark font-bold text-lg py-4 px-8 rounded-full hover:bg-white transition transform hover:scale-105 shadow-lg animate-zoom-in opacity-0 flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-3 text-2xl"></i> Cotiza tu Pedido
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== SECCIÓN NUESTRA HISTORIA ===== -->
+        <section id="historia" class="py-20 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <span class="text-sus-blue font-semibold">Nuestra Esencia</span>
+                    <h2 class="text-5xl font-fancy text-sus-dark mb-6">Nacimos para dar sabor a tus días</h2>
+                    <p class="text-gray-600 mb-4">
+                        Lo que inició como un juego entre batidores y hornos para la familia, se transformó en una cadena de pedidos que creció hasta dar forma a una verdadera pastelería. En Suspiros, no solo mezclamos ingredientes: compartimos sueños, unimos familias y creamos sonrisas.
+                    </p>
+                    <p class="font-semibold text-sus-dark italic">
+                        "Cada producto se elabora desde cero, sin premezclas ni conservantes, porque creemos que el verdadero sabor nace de la frescura y de la tradición casera."
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="assets/background2.png" alt="Manos decorando una torta con amor" class="rounded-lg shadow-xl w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== SECCIÓN PRODUCTOS ===== -->
+        <section id="productos" class="py-20 bg-sus-cream">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-fancy mb-4">Nuestros Dulces Artesanales</h2>
+                <p class="max-w-2xl mx-auto text-gray-600 mb-12">Desde tortas personalizadas hasta nuestros famosos suspiros. Todo hecho bajo pedido para garantizar la máxima frescura.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Producto 1: Tortas -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="assets/background5.png" alt="Torta de chocolate" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-fancy mb-2">Tortas Personalizadas</h3>
+                            <p class="text-gray-600 text-sm">Combina 15 bases y 21 rellenos. ¡Crea la torta de tus sueños para cualquier ocasión!</p>
+                        </div>
+                    </div>
+                    <!-- Producto 2: Suspiros -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="assets/background5.png" alt="Suspiros de merengue de colores" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-fancy mb-2">Suspiros Tradicionales</h3>
+                            <p class="text-gray-600 text-sm">Nuestro producto estrella. Ligeros, dulces y perfectos para despertar grandes sonrisas.</p>
+                        </div>
+                    </div>
+                    <!-- Producto 3: Brownies & más -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="assets/background5.png" alt="Brownies de chocolate" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-fancy mb-2">Brownies y Galletas</h3>
+                            <p class="text-gray-600 text-sm">El bocado perfecto para acompañar un café o calmar un antojo. ¡Puro chocolate!</p>
+                        </div>
+                    </div>
+                    <!-- Producto 4: Postres Fríos -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="assets/background5.png" alt="Postre frío en un vaso" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-fancy mb-2">Postres Fríos y Yogur</h3>
+                            <p class="text-gray-600 text-sm">Opciones refrescantes y deliciosas, incluyendo nuestro cremoso yogur artesanal.</p>
+                    </div>
+                </div>
+                <div class="mt-16 text-center">
+                    <a href="assets/Suspiros.pdf" target="_blank" class="bg-sus-blue text-white font-bold py-3 px-8 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105 shadow-lg inline-block">
+                        Ver Catálogo
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== SECCIÓN LÍNEAS ESPECIALES ===== -->
+        <section id="especiales" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                     <h2 class="text-4xl font-fancy mb-4">Hecho con Amor para Todos</h2>
+                     <p class="max-w-2xl mx-auto text-gray-600">Creemos que todos merecen un momento dulce. Por eso, creamos líneas especiales con el mismo cuidado y sabor.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Línea Cero Azúcar -->
+                    <div class="bg-sus-blue/20 p-8 rounded-lg text-center flex flex-col items-center">
+                        <div class="bg-sus-blue text-white rounded-full h-16 w-16 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-3.5 7m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-3.5 7M14 10L9 15" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-fancy mb-3">Línea Cero Azúcar</h3>
+                        <p class="text-gray-700">7 variedades de tortas saludables para diabéticos. Disfruta sin preocupaciones, con ingredientes que cuidan tu salud y brindan el máximo sabor.</p>
+                    </div>
+                    <!-- Línea Mascotas -->
+                     <div class="bg-sus-yellow/30 p-8 rounded-lg text-center flex flex-col items-center">
+                        <div class="bg-sus-yellow text-gray-800 rounded-full h-16 w-16 flex items-center justify-center mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-fancy mb-3">Línea para Mascotas</h3>
+                        <p class="text-gray-700">¡Ellos también celebran! Tortas, muffins y snacks a base de pollo, carne y verduras, diseñados para ser nutritivos y seguros para tus peluditos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== SECCIÓN CÓMO FUNCIONA ===== -->
+        <section id="pedidos" class="py-20 bg-sus-cream">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-4xl font-fancy mb-4">Tu Pedido en 3 Simples Pasos</h2>
+                 <p class="max-w-2xl mx-auto text-gray-600 mb-12">Somos una pastelería virtual, cada pedido se elabora especialmente para ti. ¡Así garantizamos frescura y calidad!</p>
+                 
+                 <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4"><div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">1</div><h3 class="text-lg font-semibold">Contacta y Personaliza</h3></div>
+                        <p class="text-gray-600 text-sm">Escríbenos por WhatsApp. Cuéntanos tu idea, elige tus sabores y crearemos juntos el postre perfecto. ¡Recuerda pedir con 3 días de anticipación!</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4"><div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">2</div><h3 class="text-lg font-semibold">Confirma tu Pedido</h3></div>
+                        <p class="text-gray-600 text-sm">Para reservar tu espacio en nuestra agenda, solicitamos un anticipo del 50%. Así nos ponemos manos a la obra exclusivamente para ti.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4"><div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">3</div><h3 class="text-lg font-semibold">Recibe y Disfruta</h3></div>
+                        <p class="text-gray-600 text-sm">Coordinamos la entrega a domicilio o en un punto de encuentro. Tu pedido llegará fresco, puntual y listo para crear un bello momento.</p>
+                    </div>
+                 </div>
+                 <a href="https://wa.me/573218191272?text=Hola!%20Quisiera%20iniciar%20mi%20pedido." target="_blank" class="mt-12 inline-block bg-sus-blue text-white font-bold text-lg py-3 px-10 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105 shadow-lg">
+                    ¡Empezar mi Pedido Ahora!
+                 </a>
+            </div>
+        </section>
+        
+        <!-- ===== SECCIÓN GALERÍA CON CARRUSEL DINÁMICO ===== -->
+        <section id="galeria" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-4xl font-fancy mb-4">Galería de Dulces Momentos</h2>
+                 <p class="max-w-2xl mx-auto text-gray-600 mb-12">Cada foto es una historia de celebración. Inspírate con nuestras creaciones o síguenos en Instagram para no perderte ninguna.</p>
+                 
+                 <!-- "ESCENARIO" DEL CARRUSEL: JavaScript pondrá las imágenes aquí -->
+                 <div id="gallery-container" class="flex justify-center items-end gap-4 max-w-5xl mx-auto h-[500px]">
+                    <!-- Este div se llenará dinámicamente -->
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-sus-dark text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Logo y Slogan -->
+                <div>
+                    <img src="assets/logo.png" alt="Logo Suspiros Pastelería" class="h-12 w-12 animate-slide-in-left-subtle">
+                    <h3 class="font-fancy text-3xl mb-2 text-white">Suspiros</h3>
+                    <p class="text-gray-400 text-sm">Juntos horneamos bellos momentos.</p>
+                </div>
+                <!-- Navegación -->
+                <div>
+                    <h4 class="font-semibold mb-3 text-white">Explora</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#historia" class="text-gray-400 hover:text-white">Nuestra Historia</a></li>
+                        <li><a href="#productos" class="text-gray-400 hover:text-white">Productos</a></li>
+                        <li><a href="#especiales" class="text-gray-400 hover:text-white">Líneas Especiales</a></li>
+                        <li><a href="#pedidos" class="text-gray-400 hover:text-white">Cómo Pedir</a></li>
+                    </ul>
+                </div>
+                <!-- Contacto -->
+                <div>
+                    <h4 class="font-semibold mb-3 text-white">Contacto Directo</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://wa.me/573218191272?text=Hola!%20Vengo%20de%20su%20página%20web." target="_blank" class="text-3xl hover:text-sus-blue transition"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/Suspiros1419" target="_blank" class="text-3xl hover:text-sus-blue transition"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/suspiros1419/" target="_blank" class="text-3xl hover:text-sus-blue transition"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-3">@Suspiros1419</p>
+                    <p class="text-gray-400 text-sm">321 819 1272</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-xs">
+                <p>&copy; 2024 Suspiros Pastelería Artesanal. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Lógica del Menú Móvil y Header ---
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const header = document.getElementById('header');
+
+            menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') mobileMenu.classList.add('hidden');
+            });
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('shadow-xl', window.scrollY > 50);
+            });
+
+            // --- Lógica del Carrusel Dinámico de la Galería ---
+            const galleryImageSources = [
+                'assets/background6.png', 'assets/background2.png', 'assets/background3.png', 'assets/background4.png', 'assets/background5.png', 'assets/background6.png', 'assets/background7.png',
+                // Agrega aquí más rutas a tus imágenes para completar las 12 o más que necesites
+                'assets/background2.png', 'assets/background3.png', 'assets/background4.png', 'assets/background5.png', 'assets/background6.png'
+            ];
+            
+            const galleryContainer = document.getElementById('gallery-container');
+
+            const shuffleArray = (array) => array.sort(() => 0.5 - Math.random());
+
+            // --- Construcción Inicial de la Galería ---
+            shuffleArray(galleryImageSources);
+            const initialImages = galleryImageSources.slice(0, 4);
+            const layoutClasses = ['w-1/4 h-3/4', 'w-1/4 h-full', 'w-1/4 h-full', 'w-1/4 h-3/4'];
+
+            initialImages.forEach((imgSrc, index) => {
+                galleryContainer.innerHTML += `
+                    <div class="gallery-carousel-slot ${layoutClasses[index]} rounded-lg shadow-xl overflow-hidden">
+                        <img class="h-full w-full object-cover" src="${imgSrc}" alt="Pastel de Suspiros ${index + 1}">
+                    </div>
+                `;
+            });
+            
+            // --- Inicio del Carrusel Automático ---
+            const gallerySlots = document.querySelectorAll('.gallery-carousel-slot');
+            if (gallerySlots.length > 0 && galleryImageSources.length > gallerySlots.length) {
+                let imagesInUse = initialImages;
+                let availableImages = galleryImageSources.slice(4);
+                
+                setInterval(() => {
+                    if (availableImages.length === 0) availableImages = galleryImageSources.filter(src => !imagesInUse.includes(src));
+                    
+                    const slotIndexToReplace = Math.floor(Math.random() * gallerySlots.length);
+                    const newImageIndex = Math.floor(Math.random() * availableImages.length);
+                    
+                    const slot = gallerySlots[slotIndexToReplace];
+                    const imgElement = slot.querySelector('img');
+                    const newImageSrc = availableImages[newImageIndex];
+                    const oldImageSrc = imagesInUse[slotIndexToReplace];
+                    
+                    imgElement.classList.add('animate-fade-down-out');
+                    setTimeout(() => {
+                        imgElement.src = newImageSrc;
+                        imgElement.onload = () => {
+                            imgElement.classList.remove('animate-fade-down-out');
+                            imgElement.classList.add('animate-fade-down-in');
+                            setTimeout(() => imgElement.classList.remove('animate-fade-down-in'), 600);
+                        };
+                    }, 600);
+
+                    imagesInUse[slotIndexToReplace] = newImageSrc;
+                    availableImages.splice(newImageIndex, 1);
+                    availableImages.push(oldImageSrc);
+                }, 4000);
+            }
+        });
+    </script>
+</body>
+</html>

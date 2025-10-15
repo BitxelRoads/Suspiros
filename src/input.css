@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Puedes agregar aquí estilos personalizados si es necesario, 
+  por ejemplo, para un efecto de texto específico.
+  body {
+    @apply antialiased;
+  }
+*/

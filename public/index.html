@@ -3,44 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suspiros Pastelería Artesanal - Horneamos Bellos Momentos</title>
+    <title>Suspiros Pastelería Artesanal - Juntos Horneamos Bellos Momentos</title>
     <meta name="description" content="Pastelería artesanal hecha con amor. Tortas personalizadas, postres para diabéticos y para mascotas. Pedidos con 3 días de anticipación.">
-    
-    <!-- CSS Compilado de Tailwind -->
     <link href="css/output.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome (para el ícono de WhatsApp) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
 <body class="bg-sus-cream font-sans text-sus-dark">
 
-    <!-- ===== HEADER Y NAVEGACIÓN ===== -->
+
     <header id="header" class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <!-- Logo -->
             <a href="#" class="flex items-center space-x-2">
                 <img src="assets/logo.png" alt="Logo Suspiros Pastelería" class="h-12 w-12 animate-slide-in-left-subtle">
                 <span class="font-fancy text-2xl text-sus-dark animate-slide-in-left-subtle">Suspiros</span>
             </a>
-            
-            <!-- Menú Desktop -->
             <div class="hidden md:flex space-x-8 items-center animate-slide-in-right-subtle">
                 <a href="#historia" class="text-gray-700 hover:text-sus-pink transition">Nuestra Historia</a>
                 <a href="#productos" class="text-gray-700 hover:text-sus-pink transition">Productos</a>
                 <a href="#especiales" class="text-gray-700 hover:text-sus-pink transition">Líneas Especiales</a>
                 <a href="#galeria" class="text-gray-700 hover:text-sus-pink transition">Galería</a>
-                <a href="https://wa.me/573218191272?text=Hola!%20Quisiera%20hacer%20un%20pedido." target="_blank" class="bg-sus-blue text-white font-bold py-2 px-5 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105">
+                <a href="https://wa.me/573218191272?text=Hola!%20Quisiera%20hacer%20un%20pedido." target="_blank" class="inline-block text-center bg-sus-blue text-white font-bold py-2 px-5 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105">
                     Haz tu Pedido
                 </a>
             </div>
 
-            <!-- Botón Menú Móvil -->
             <div class="md:hidden">
                 <button id="menu-btn" class="text-sus-dark focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -48,7 +38,6 @@
             </div>
         </nav>
         
-        <!-- Menú Móvil -->
         <div id="mobile-menu" class="hidden md:hidden animate-slide-in-right-subtle bg-white/95 backdrop-blur-sm">
             <a href="#historia" class="block py-2 px-6 text-sm text-gray-700 hover:bg-sus-pink/20">Nuestra Historia</a>
             <a href="#productos" class="block py-2 px-6 text-sm text-gray-700 hover:bg-sus-pink/20">Productos</a>
@@ -61,7 +50,7 @@
     </header>
 
     <main>
-        <!-- ===== SECCIÓN HERO ===== -->   
+        <!--  HERO  -->   
         <section class="relative h-screen flex items-center justify-center pt-20">
             <div class="absolute inset-0 bg-black opacity-30"></div>
             <img src="assets/background.png" alt="Torta artesanal decorada con flores" class="absolute inset-0 w-full h-full object-cover">
@@ -75,7 +64,7 @@
             </div>
         </section>
 
-        <!-- ===== SECCIÓN NUESTRA HISTORIA ===== -->
+        <!--   NUESTRA HISTORIA -->
         <section id="historia" class="py-20 bg-white">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
@@ -84,64 +73,73 @@
                     <p class="text-gray-600 mb-4">
                         Lo que inició como un juego entre batidores y hornos para la familia, se transformó en una cadena de pedidos que creció hasta dar forma a una verdadera pastelería. En Suspiros, no solo mezclamos ingredientes: compartimos sueños, unimos familias y creamos sonrisas.
                     </p>
-                    <p class="font-semibold text-sus-dark italic">
+                    <p class="font-semibold text-sus-dark italic text-lg">
                         "Cada producto se elabora desde cero, sin premezclas ni conservantes, porque creemos que el verdadero sabor nace de la frescura y de la tradición casera."
                     </p>
                 </div>
                 <div class="order-1 md:order-2">
-                    <img src="assets/background2.png" alt="Manos decorando una torta con amor" class="rounded-lg shadow-xl w-full h-full object-cover">
+                    <img src="assets/20.png" alt="Manos decorando una torta con amor" class="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover object-center">
                 </div>
             </div>
         </section>
         
-        <!-- ===== SECCIÓN PRODUCTOS ===== -->
+        <!--  PRODUCTOS -->
         <section id="productos" class="py-20 bg-sus-cream">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl font-fancy mb-4">Nuestros Dulces Artesanales</h2>
-                <p class="max-w-2xl mx-auto text-gray-600 mb-12">Desde tortas personalizadas hasta nuestros famosos suspiros. Todo hecho bajo pedido para garantizar la máxima frescura.</p>
-                
+                <p class="max-w-2xl mx-auto text-gray-600 mb-12">
+                    Desde tortas personalizadas hasta nuestros famosos suspiros. Todo hecho bajo pedido para garantizar la máxima frescura.
+                </p>
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Producto 1: Tortas -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/background5.png" alt="Torta de chocolate" class="w-full h-56 object-cover">
+                        <img src="assets/9.png" alt="Torta de chocolate" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Tortas Personalizadas</h3>
                             <p class="text-gray-600 text-sm">Combina 15 bases y 21 rellenos. ¡Crea la torta de tus sueños para cualquier ocasión!</p>
                         </div>
                     </div>
+
                     <!-- Producto 2: Suspiros -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/background5.png" alt="Suspiros de merengue de colores" class="w-full h-56 object-cover">
+                        <img src="assets/background.png" alt="Suspiros de merengue de colores" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Suspiros Tradicionales</h3>
                             <p class="text-gray-600 text-sm">Nuestro producto estrella. Ligeros, dulces y perfectos para despertar grandes sonrisas.</p>
                         </div>
                     </div>
+
                     <!-- Producto 3: Brownies & más -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/background5.png" alt="Brownies de chocolate" class="w-full h-56 object-cover">
+                        <img src="assets/8.png" alt="Brownies de chocolate" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Brownies y Galletas</h3>
                             <p class="text-gray-600 text-sm">El bocado perfecto para acompañar un café o calmar un antojo. ¡Puro chocolate!</p>
                         </div>
                     </div>
+
                     <!-- Producto 4: Postres Fríos -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/background5.png" alt="Postre frío en un vaso" class="w-full h-56 object-cover">
+                        <img src="assets/27.png" alt="Postre frío en un vaso" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Postres Fríos y Yogur</h3>
                             <p class="text-gray-600 text-sm">Opciones refrescantes y deliciosas, incluyendo nuestro cremoso yogur artesanal.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="mt-16 text-center">
-                    <a href="assets/Suspiros.pdf" target="_blank" class="bg-sus-blue text-white font-bold py-3 px-8 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105 shadow-lg inline-block">
+
+                <!-- Botón centrado -->
+                <div class="mt-16 flex justify-center">
+                    <a href="assets/Suspiros.pdf" target="_blank"
+                    class="bg-sus-blue text-white font-bold py-3 px-8 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105 shadow-lg">
                         Ver Catálogo
                     </a>
                 </div>
             </div>
         </section>
         
-        <!-- ===== SECCIÓN LÍNEAS ESPECIALES ===== -->
+        <!-- SECCIÓN LÍNEAS ESPECIALES -->
         <section id="especiales" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
@@ -152,7 +150,11 @@
                     <!-- Línea Cero Azúcar -->
                     <div class="bg-sus-blue/20 p-8 rounded-lg text-center flex flex-col items-center">
                         <div class="bg-sus-blue text-white rounded-full h-16 w-16 flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-3.5 7m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-3.5 7M14 10L9 15" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-leaf h-8 w-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                               <path d="M5 21c.5-4.5 2.5-8 7-10"></path>
+                               <path d="M9 18c6.218 0 10.5-3.288 11-12V4h-4.014c-9 0-9.986 7-9.986 12z"></path>
+                            </svg>
                         </div>
                         <h3 class="text-2xl font-fancy mb-3">Línea Cero Azúcar</h3>
                         <p class="text-gray-700">7 variedades de tortas saludables para diabéticos. Disfruta sin preocupaciones, con ingredientes que cuidan tu salud y brindan el máximo sabor.</p>
@@ -160,7 +162,14 @@
                     <!-- Línea Mascotas -->
                      <div class="bg-sus-yellow/30 p-8 rounded-lg text-center flex flex-col items-center">
                         <div class="bg-sus-yellow text-gray-800 rounded-full h-16 w-16 flex items-center justify-center mb-4">
-                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-paw h-8 w-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                              <path d="M10 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" />
+                              <path d="M14 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(90 12 19)" />
+                              <path d="M18 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(180 16 19)" />
+                              <path d="M22 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(270 20 19)" />
+                              <path d="M12 5a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(45 12 5)" />
+                            </svg>
                         </div>
                         <h3 class="text-2xl font-fancy mb-3">Línea para Mascotas</h3>
                         <p class="text-gray-700">¡Ellos también celebran! Tortas, muffins y snacks a base de pollo, carne y verduras, diseñados para ser nutritivos y seguros para tus peluditos.</p>
@@ -169,33 +178,61 @@
             </div>
         </section>
         
-        <!-- ===== SECCIÓN CÓMO FUNCIONA ===== -->
-        <section id="pedidos" class="py-20 bg-sus-cream">
-            <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-4xl font-fancy mb-4">Tu Pedido en 3 Simples Pasos</h2>
-                 <p class="max-w-2xl mx-auto text-gray-600 mb-12">Somos una pastelería virtual, cada pedido se elabora especialmente para ti. ¡Así garantizamos frescura y calidad!</p>
-                 
-                 <div class="grid md:grid-cols-3 gap-8 text-left">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="flex items-center mb-4"><div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">1</div><h3 class="text-lg font-semibold">Contacta y Personaliza</h3></div>
-                        <p class="text-gray-600 text-sm">Escríbenos por WhatsApp. Cuéntanos tu idea, elige tus sabores y crearemos juntos el postre perfecto. ¡Recuerda pedir con 3 días de anticipación!</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="flex items-center mb-4"><div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">2</div><h3 class="text-lg font-semibold">Confirma tu Pedido</h3></div>
-                        <p class="text-gray-600 text-sm">Para reservar tu espacio en nuestra agenda, solicitamos un anticipo del 50%. Así nos ponemos manos a la obra exclusivamente para ti.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="flex items-center mb-4"><div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">3</div><h3 class="text-lg font-semibold">Recibe y Disfruta</h3></div>
-                        <p class="text-gray-600 text-sm">Coordinamos la entrega a domicilio o en un punto de encuentro. Tu pedido llegará fresco, puntual y listo para crear un bello momento.</p>
-                    </div>
-                 </div>
-                 <a href="https://wa.me/573218191272?text=Hola!%20Quisiera%20iniciar%20mi%20pedido." target="_blank" class="mt-12 inline-block bg-sus-blue text-white font-bold text-lg py-3 px-10 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105 shadow-lg">
-                    ¡Empezar mi Pedido Ahora!
-                 </a>
-            </div>
-        </section>
+        <!-- SECCIÓN CÓMO FUNCIONA -->
+        <section id="pedidos" class="relative py-20 bg-sus-cream overflow-hidden">
         
-        <!-- ===== SECCIÓN GALERÍA CON CARRUSEL DINÁMICO ===== -->
+        <!-- 🎥 Video de fondo -->
+        <video autoplay muted loop playsinline 
+            class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <source src="/assets/video.mp4" type="video/mp4">
+            Tu navegador no soporta video en HTML5.
+        </video>
+
+        <!-- Capa de color suave (opcional, mejora contraste del texto) -->
+        <div class="absolute inset-0 bg-white/30"></div>
+
+        <!-- Contenido principal -->
+        <div class="relative z-10 container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-fancy mb-4">Tu Pedido en 3 Simples Pasos</h2>
+            <p class="max-w-2xl mx-auto text-gray-600 mb-12">
+            Somos una pastelería virtual, cada pedido se elabora especialmente para ti. ¡Así garantizamos frescura y calidad!
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                <div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">1</div>
+                <h3 class="text-lg font-semibold">Contacta y Personaliza</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Escríbenos por WhatsApp. Cuéntanos tu idea, elige tus sabores y crearemos juntos el postre perfecto. ¡Recuerda pedir con 3 días de anticipación!</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                <div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">2</div>
+                <h3 class="text-lg font-semibold">Confirma tu Pedido</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Para reservar tu espacio en nuestra agenda, solicitamos un anticipo del 50%. Así nos ponemos manos a la obra exclusivamente para ti.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                <div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">3</div>
+                <h3 class="text-lg font-semibold">Recibe y Disfruta</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Coordinamos la entrega a domicilio o en un punto de encuentro. Tu pedido llegará fresco, puntual y listo para crear un bello momento.</p>
+            </div>
+            </div>
+
+            <a href="https://wa.me/573218191272?text=Hola!%20Quisiera%20iniciar%20mi%20pedido." target="_blank" 
+            class="mt-12 inline-block bg-sus-blue text-white font-bold text-lg py-3 px-10 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105 shadow-lg">
+            ¡Empezar mi Pedido Ahora!
+            </a>
+        </div>
+        </section>
+
+        
+        <!-- SECCIÓN GALERÍA CON CARRUSEL DINÁMICO -->
         <section id="galeria" class="py-20 bg-white">
             <div class="container mx-auto px-6 text-center">
                  <h2 class="text-4xl font-fancy mb-4">Galería de Dulces Momentos</h2>
@@ -209,7 +246,7 @@
         </section>
     </main>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- FOOTER -->
     <footer class="bg-sus-dark text-white">
         <div class="container mx-auto px-6 py-12">
             <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
@@ -247,7 +284,7 @@
         </div>
     </footer>
 
-    <!-- ===== JAVASCRIPT ===== -->
+    <!-- ===== JAVASCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Lógica del Menú Móvil y Header ---
@@ -264,11 +301,13 @@
             });
 
             // --- Lógica del Carrusel Dinámico de la Galería ---
-            const galleryImageSources = [
-                'assets/background6.png', 'assets/background2.png', 'assets/background3.png', 'assets/background4.png', 'assets/background5.png', 'assets/background6.png', 'assets/background7.png',
-                // Agrega aquí más rutas a tus imágenes para completar las 12 o más que necesites
-                'assets/background2.png', 'assets/background3.png', 'assets/background4.png', 'assets/background5.png', 'assets/background6.png'
-            ];
+            const galleryImageSources = Array.from(new Set([
+                'assets/1.png', 'assets/2.png', 'assets/3.png', 'assets/4.png', 'assets/5.png', 'assets/6.png', 'assets/7.png',
+                'assets/8.png', 'assets/9.png', 'assets/10.png', 'assets/11.png', 'assets/12.png', 'assets/13.png',
+                'assets/14.png', 'assets/15.png', 'assets/16.png', 'assets/17.png', 'assets/18.png', 'assets/19.png', 'assets/20.png',
+                'assets/21.png', 'assets/22.png', 'assets/23.png', 'assets/24.png', 'assets/25.png', 'assets/26.png', 'assets/27.png',
+                'assets/28.png', 'assets/29.png', 'assets/30.png', 'assets/32.png'
+            ]));
             
             const galleryContainer = document.getElementById('gallery-container');
 
@@ -290,19 +329,24 @@
             // --- Inicio del Carrusel Automático ---
             const gallerySlots = document.querySelectorAll('.gallery-carousel-slot');
             if (gallerySlots.length > 0 && galleryImageSources.length > gallerySlots.length) {
-                let imagesInUse = initialImages;
-                let availableImages = galleryImageSources.slice(4);
+                let imagesInUse = [...initialImages];
+                let availableImages = galleryImageSources.filter(img => !imagesInUse.includes(img));
                 
                 setInterval(() => {
-                    if (availableImages.length === 0) availableImages = galleryImageSources.filter(src => !imagesInUse.includes(src));
-                    
+                    if (availableImages.length === 0) {
+                        console.warn('No hay más imágenes disponibles para rotar. Reiniciando la lista de disponibles.');
+                        availableImages = galleryImageSources.filter(img => !imagesInUse.includes(img));
+                        if (availableImages.length === 0) return;
+                    }
+
                     const slotIndexToReplace = Math.floor(Math.random() * gallerySlots.length);
                     const newImageIndex = Math.floor(Math.random() * availableImages.length);
                     
                     const slot = gallerySlots[slotIndexToReplace];
                     const imgElement = slot.querySelector('img');
-                    const newImageSrc = availableImages[newImageIndex];
+                    
                     const oldImageSrc = imagesInUse[slotIndexToReplace];
+                    const newImageSrc = availableImages[newImageIndex];
                     
                     imgElement.classList.add('animate-fade-down-out');
                     setTimeout(() => {
@@ -316,7 +360,9 @@
 
                     imagesInUse[slotIndexToReplace] = newImageSrc;
                     availableImages.splice(newImageIndex, 1);
-                    availableImages.push(oldImageSrc);
+                    if (oldImageSrc) {
+                        availableImages.push(oldImageSrc);
+                    }
                 }, 4000);
             }
         });

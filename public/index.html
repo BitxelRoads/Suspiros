@@ -238,10 +238,23 @@
                  <h2 class="text-4xl font-fancy mb-4">Galería de Dulces Momentos</h2>
                  <p class="max-w-2xl mx-auto text-gray-600 mb-12">Cada foto es una historia de celebración. Inspírate con nuestras creaciones o síguenos en Instagram para no perderte ninguna.</p>
                  
-                 <!-- "ESCENARIO" DEL CARRUSEL: JavaScript pondrá las imágenes aquí -->
-                 <div id="gallery-container" class="flex justify-center items-end gap-4 max-w-5xl mx-auto h-[500px]">
+                 <!-- Desktop Carousel -->
+                 <div id="gallery-container" class="hidden md:flex justify-center items-end gap-4 max-w-5xl mx-auto h-[500px]">
                     <!-- Este div se llenará dinámicamente -->
                  </div>
+
+                 <!-- Mobile Carousel -->
+                <div id="mobile-gallery-container" class="md:hidden relative w-full h-[400px] mx-auto overflow-hidden rounded-lg shadow-xl">
+                    <div id="mobile-gallery-slide" class="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-500 ease-in-out">
+                        <img class="h-full w-full object-cover" src="" alt="Pastel de Suspiros">
+                    </div>
+                    <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/60 hover:bg-white/90 p-3 rounded-full shadow-md z-10 transition-all">
+                        <svg class="w-6 h-6 text-sus-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/60 hover:bg-white/90 p-3 rounded-full shadow-md z-10 transition-all">
+                        <svg class="w-6 h-6 text-sus-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
             </div>
         </section>
     </main>
@@ -309,61 +322,109 @@
                 'assets/28.png', 'assets/29.png', 'assets/30.png', 'assets/32.png'
             ]));
             
-            const galleryContainer = document.getElementById('gallery-container');
-
             const shuffleArray = (array) => array.sort(() => 0.5 - Math.random());
-
-            // --- Construcción Inicial de la Galería ---
             shuffleArray(galleryImageSources);
-            const initialImages = galleryImageSources.slice(0, 4);
-            const layoutClasses = ['w-1/4 h-3/4', 'w-1/4 h-full', 'w-1/4 h-full', 'w-1/4 h-3/4'];
 
-            initialImages.forEach((imgSrc, index) => {
-                galleryContainer.innerHTML += `
-                    <div class="gallery-carousel-slot ${layoutClasses[index]} rounded-lg shadow-xl overflow-hidden">
-                        <img class="h-full w-full object-cover" src="${imgSrc}" alt="Pastel de Suspiros ${index + 1}">
-                    </div>
-                `;
-            });
-            
-            // --- Inicio del Carrusel Automático ---
-            const gallerySlots = document.querySelectorAll('.gallery-carousel-slot');
-            if (gallerySlots.length > 0 && galleryImageSources.length > gallerySlots.length) {
-                let imagesInUse = [...initialImages];
-                let availableImages = galleryImageSources.filter(img => !imagesInUse.includes(img));
-                
-                setInterval(() => {
-                    if (availableImages.length === 0) {
-                        console.warn('No hay más imágenes disponibles para rotar. Reiniciando la lista de disponibles.');
-                        availableImages = galleryImageSources.filter(img => !imagesInUse.includes(img));
-                        if (availableImages.length === 0) return;
-                    }
+            if (window.innerWidth < 768) {
+                // --- Lógica del Carrusel Móvil ---
+                const mobileGalleryContainer = document.getElementById('mobile-gallery-container');
+                const mobileImg = document.querySelector('#mobile-gallery-slide img');
+                const prevBtn = document.getElementById('prev-btn');
+                const nextBtn = document.getElementById('next-btn');
+                const mobileGallerySlide = document.getElementById('mobile-gallery-slide');
 
-                    const slotIndexToReplace = Math.floor(Math.random() * gallerySlots.length);
-                    const newImageIndex = Math.floor(Math.random() * availableImages.length);
-                    
-                    const slot = gallerySlots[slotIndexToReplace];
-                    const imgElement = slot.querySelector('img');
-                    
-                    const oldImageSrc = imagesInUse[slotIndexToReplace];
-                    const newImageSrc = availableImages[newImageIndex];
-                    
-                    imgElement.classList.add('animate-fade-down-out');
+                let currentIndex = 0;
+
+                function showImage(index) {
+                    mobileImg.src = galleryImageSources[index];
+                }
+
+                function nextImage() {
+                    mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
+                    mobileGallerySlide.style.transform = 'translateX(-100%)';
                     setTimeout(() => {
-                        imgElement.src = newImageSrc;
-                        imgElement.onload = () => {
-                            imgElement.classList.remove('animate-fade-down-out');
-                            imgElement.classList.add('animate-fade-down-in');
-                            setTimeout(() => imgElement.classList.remove('animate-fade-down-in'), 600);
-                        };
-                    }, 600);
+                        currentIndex = (currentIndex + 1) % galleryImageSources.length;
+                        showImage(currentIndex);
+                        mobileGallerySlide.style.transition = 'none';
+                        mobileGallerySlide.style.transform = 'translateX(100%)';
+                        setTimeout(() => {
+                            mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
+                            mobileGallerySlide.style.transform = 'translateX(0)';
+                        }, 20);
+                    }, 500);
+                }
 
-                    imagesInUse[slotIndexToReplace] = newImageSrc;
-                    availableImages.splice(newImageIndex, 1);
-                    if (oldImageSrc) {
-                        availableImages.push(oldImageSrc);
-                    }
-                }, 4000);
+                function prevImage() {
+                    mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
+                    mobileGallerySlide.style.transform = 'translateX(100%)';
+                    setTimeout(() => {
+                        currentIndex = (currentIndex - 1 + galleryImageSources.length) % galleryImageSources.length;
+                        showImage(currentIndex);
+                        mobileGallerySlide.style.transition = 'none';
+                        mobileGallerySlide.style.transform = 'translateX(-100%)';
+                        setTimeout(() => {
+                            mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
+                            mobileGallerySlide.style.transform = 'translateX(0)';
+                        }, 20);
+                    }, 500);
+                }
+
+                nextBtn.addEventListener('click', nextImage);
+                prevBtn.addEventListener('click', prevImage);
+
+                showImage(currentIndex);
+
+            } else {
+                // --- Lógica para el carrusel de escritorio ---
+                const galleryContainer = document.getElementById('gallery-container');
+                const initialImages = galleryImageSources.slice(0, 4);
+                const layoutClasses = ['w-1/4 h-3/4', 'w-1/4 h-full', 'w-1/4 h-full', 'w-1/4 h-3/4'];
+
+                initialImages.forEach((imgSrc, index) => {
+                    galleryContainer.innerHTML += `
+                        <div class="gallery-carousel-slot ${layoutClasses[index]} rounded-lg shadow-xl overflow-hidden">
+                            <img class="h-full w-full object-cover" src="${imgSrc}" alt="Pastel de Suspiros ${index + 1}">
+                        </div>
+                    `;
+                });
+                
+                const gallerySlots = document.querySelectorAll('.gallery-carousel-slot');
+                if (gallerySlots.length > 0 && galleryImageSources.length > gallerySlots.length) {
+                    let imagesInUse = [...initialImages];
+                    let availableImages = galleryImageSources.filter(img => !imagesInUse.includes(img));
+                    
+                    setInterval(() => {
+                        if (availableImages.length === 0) {
+                            availableImages = galleryImageSources.filter(img => !imagesInUse.includes(img));
+                            if (availableImages.length === 0) return;
+                        }
+
+                        const slotIndexToReplace = Math.floor(Math.random() * gallerySlots.length);
+                        const newImageIndex = Math.floor(Math.random() * availableImages.length);
+                        
+                        const slot = gallerySlots[slotIndexToReplace];
+                        const imgElement = slot.querySelector('img');
+                        
+                        const oldImageSrc = imagesInUse[slotIndexToReplace];
+                        const newImageSrc = availableImages[newImageIndex];
+                        
+                        imgElement.classList.add('animate-fade-down-out');
+                        setTimeout(() => {
+                            imgElement.src = newImageSrc;
+                            imgElement.onload = () => {
+                                imgElement.classList.remove('animate-fade-down-out');
+                                imgElement.classList.add('animate-fade-down-in');
+                                setTimeout(() => imgElement.classList.remove('animate-fade-down-in'), 600);
+                            };
+                        }, 600);
+
+                        imagesInUse[slotIndexToReplace] = newImageSrc;
+                        availableImages.splice(newImageIndex, 1);
+                        if (oldImageSrc) {
+                            availableImages.push(oldImageSrc);
+                        }
+                    }, 4000);
+                }
             }
         });
     </script>

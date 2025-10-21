@@ -235,7 +235,7 @@
         <!-- SECCIÓN GALERÍA CON CARRUSEL DINÁMICO -->
         <section id="galeria" class="py-20 bg-white">
             <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-4xl font-fancy mb-4">Galería de Dulces Momentos</h2>
+                 <h2 class="text-4xl font-fancy mb-4">Galería</h2>
                  <p class="max-w-2xl mx-auto text-gray-600 mb-12">Cada foto es una historia de celebración. Inspírate con nuestras creaciones o síguenos en Instagram para no perderte ninguna.</p>
                  
                  <!-- Desktop Carousel -->
@@ -323,7 +323,14 @@
             ]));
             
             const shuffleArray = (array) => array.sort(() => 0.5 - Math.random());
-            shuffleArray(galleryImageSources);
+            // shuffleArray(galleryImageSources); // No shufflamos el array completo
+
+            const exclusiveImages = [
+                'assets/6.png', 'assets/16.png', 'assets/17.png', 'assets/18.png', 'assets/19.png'
+            ];
+
+            const generalImageSources = galleryImageSources.filter(img => !exclusiveImages.includes(img));
+            const shuffledGeneralImages = shuffleArray([...generalImageSources]);
 
             if (window.innerWidth < 768) {
                 // --- Lógica del Carrusel Móvil ---
@@ -373,38 +380,68 @@
             } else {
                 // --- Lógica para el carrusel de escritorio ---
                 const galleryContainer = document.getElementById('gallery-container');
-                const initialImages = galleryImageSources.slice(0, 4);
                 const layoutClasses = ['w-1/4 h-3/4', 'w-1/4 h-full', 'w-1/4 h-full', 'w-1/4 h-3/4'];
 
-                initialImages.forEach((imgSrc, index) => {
-                    galleryContainer.innerHTML += `
-                        <div class="gallery-carousel-slot ${layoutClasses[index]} rounded-lg shadow-xl overflow-hidden">
-                            <img class="h-full w-full object-cover" src="${imgSrc}" alt="Pastel de Suspiros ${index + 1}" loading="lazy">
+                let desktopImagesInUse = [];
+                let carouselHtml = '';
+
+                // Aseguramos que el primer panel tenga una imagen exclusiva
+                let currentExclusiveImage = exclusiveImages[Math.floor(Math.random() * exclusiveImages.length)];
+                desktopImagesInUse.push(currentExclusiveImage);
+
+                carouselHtml += `
+                    <div class="gallery-carousel-slot ${layoutClasses[0]} rounded-lg shadow-xl overflow-hidden">
+                        <img class="h-full w-full object-cover" src="${currentExclusiveImage}" alt="Pastel de Suspiros 1" loading="lazy">
+                    </div>
+                `;
+
+                // Llenamos los otros 3 paneles con imágenes generales
+                let tempShuffledGeneralImages = [...shuffledGeneralImages]; // Hacemos una copia para no alterar el original de forma inesperada
+                for (let i = 0; i < 3; i++) {
+                    let image = tempShuffledGeneralImages.pop();
+                    if (!image) {
+                        // Si por alguna razón nos quedamos sin imágenes generales aquí, recargamos y barajamos el array original.
+                        // Esto es un fallback, no debería suceder con la cantidad de imágenes actuales.
+                        tempShuffledGeneralImages = shuffleArray([...generalImageSources]);
+                        image = tempShuffledGeneralImages.pop();
+                    }
+                    desktopImagesInUse.push(image);
+                    carouselHtml += `
+                        <div class="gallery-carousel-slot ${layoutClasses[i + 1]} rounded-lg shadow-xl overflow-hidden">
+                            <img class="h-full w-full object-cover" src="${image}" alt="Pastel de Suspiros ${i + 2}" loading="lazy">
                         </div>
                     `;
-                });
+                }
+                galleryContainer.innerHTML = carouselHtml; // Asignamos el HTML una sola vez
                 
                 const gallerySlots = document.querySelectorAll('.gallery-carousel-slot');
                 if (gallerySlots.length > 0 && galleryImageSources.length > gallerySlots.length) {
-                    let imagesInUse = [...initialImages];
-                    let availableImages = galleryImageSources.filter(img => !imagesInUse.includes(img));
-                    
-                    setInterval(() => {
-                        if (availableImages.length === 0) {
-                            availableImages = galleryImageSources.filter(img => !imagesInUse.includes(img));
-                            if (availableImages.length === 0) return;
-                        }
+                    let imagesInUse = desktopImagesInUse; // Usamos las imágenes ya inicializadas
+                    let availableExclusiveImages = exclusiveImages.filter(img => img !== imagesInUse[0]);
+                    let availableGeneralImages = generalImageSources.filter(img => !imagesInUse.includes(img) && !exclusiveImages.includes(img));
 
+                    setInterval(() => {
                         const slotIndexToReplace = Math.floor(Math.random() * gallerySlots.length);
-                        const newImageIndex = Math.floor(Math.random() * availableImages.length);
-                        
                         const slot = gallerySlots[slotIndexToReplace];
                         const imgElement = slot.querySelector('img');
-                        imgElement.setAttribute('loading', 'lazy');
                         
-                        const oldImageSrc = imagesInUse[slotIndexToReplace];
-                        const newImageSrc = availableImages[newImageIndex];
-                        
+                        let oldImageSrc = imagesInUse[slotIndexToReplace];
+                        let newImageSrc;
+
+                        if (slotIndexToReplace === 0) {
+                            // Para el primer panel, usa imágenes exclusivas
+                            if (availableExclusiveImages.length === 0) {
+                                availableExclusiveImages = exclusiveImages.filter(img => img !== oldImageSrc);
+                            }
+                            newImageSrc = availableExclusiveImages.splice(Math.floor(Math.random() * availableExclusiveImages.length), 1)[0];
+                        } else {
+                            // Para los otros paneles, usa imágenes generales
+                            if (availableGeneralImages.length === 0) {
+                                availableGeneralImages = generalImageSources.filter(img => !imagesInUse.includes(img) && img !== oldImageSrc);
+                            }
+                            newImageSrc = availableGeneralImages.splice(Math.floor(Math.random() * availableGeneralImages.length), 1)[0];
+                        }
+
                         imgElement.classList.add('animate-fade-down-out');
                         setTimeout(() => {
                             imgElement.src = newImageSrc;
@@ -416,10 +453,15 @@
                         }, 600);
 
                         imagesInUse[slotIndexToReplace] = newImageSrc;
-                        availableImages.splice(newImageIndex, 1);
-                        if (oldImageSrc) {
-                            availableImages.push(oldImageSrc);
+                        // Si la imagen vieja no es exclusiva del slot 0 y no es del slot 0, la añadimos a las disponibles generales
+                        if (oldImageSrc && slotIndexToReplace !== 0 && !exclusiveImages.includes(oldImageSrc)) {
+                            availableGeneralImages.push(oldImageSrc);
                         }
+                        // Si la imagen vieja es del slot 0 y es exclusiva, la añadimos a las disponibles exclusivas
+                        else if (oldImageSrc && slotIndexToReplace === 0 && exclusiveImages.includes(oldImageSrc)) {
+                            availableExclusiveImages.push(oldImageSrc);
+                        }
+                        
                     }, 4000);
                 }
             }

@@ -340,39 +340,35 @@
                 }
 
                 function nextImage() {
-                    mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
-                    mobileGallerySlide.style.transform = 'translateX(-100%)';
-                    setTimeout(() => {
-                        currentIndex = (currentIndex + 1) % galleryImageSources.length;
-                        showImage(currentIndex);
-                        mobileGallerySlide.style.transition = 'none';
-                        mobileGallerySlide.style.transform = 'translateX(100%)';
-                        setTimeout(() => {
-                            mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
-                            mobileGallerySlide.style.transform = 'translateX(0)';
-                        }, 20);
-                    }, 500);
+                    currentIndex = (currentIndex + 1) % galleryImageSources.length;
+                    showImage(currentIndex);
+                    mobileGallerySlide.style.transition = 'none';
+                    mobileGallerySlide.style.transform = 'translateX(100%)';
+
+                    requestAnimationFrame(() => {
+                        mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
+                        mobileGallerySlide.style.transform = 'translateX(0)';
+                    });
                 }
 
                 function prevImage() {
-                    mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
-                    mobileGallerySlide.style.transform = 'translateX(100%)';
-                    setTimeout(() => {
-                        currentIndex = (currentIndex - 1 + galleryImageSources.length) % galleryImageSources.length;
-                        showImage(currentIndex);
-                        mobileGallerySlide.style.transition = 'none';
-                        mobileGallerySlide.style.transform = 'translateX(-100%)';
-                        setTimeout(() => {
-                            mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
-                            mobileGallerySlide.style.transform = 'translateX(0)';
-                        }, 20);
-                    }, 500);
+                    currentIndex = (currentIndex - 1 + galleryImageSources.length) % galleryImageSources.length;
+                    showImage(currentIndex);
+                    mobileGallerySlide.style.transition = 'none';
+                    mobileGallerySlide.style.transform = 'translateX(-100%)';
+
+                    requestAnimationFrame(() => {
+                        mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
+                        mobileGallerySlide.style.transform = 'translateX(0)';
+                    });
                 }
 
                 nextBtn.addEventListener('click', nextImage);
                 prevBtn.addEventListener('click', prevImage);
 
                 showImage(currentIndex);
+
+                setInterval(nextImage, 4000);
 
             } else {
                 // --- Lógica para el carrusel de escritorio ---

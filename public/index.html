@@ -53,7 +53,7 @@
         <!--  HERO  -->   
         <section class="relative h-screen flex items-center justify-center pt-20">
             <div class="absolute inset-0 bg-black opacity-30"></div>
-            <img src="assets/background.png" alt="Torta artesanal decorada con flores" class="absolute inset-0 w-full h-full object-cover">
+            <img src="assets/background.png" alt="Torta artesanal decorada con flores" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
             
             <div class="relative z-10 text-center p-10 flex flex-col items-center bg-white/10 rounded-2xl backdrop-blur-sm">
                 <img src="assets/suspiros_letra.png" alt="Letra de Suspiros" class="drop-shadow-white-md animate-slide-in-left-subtle opacity-0 [animation-delay:0.2s]">
@@ -78,7 +78,7 @@
                     </p>
                 </div>
                 <div class="order-1 md:order-2">
-                    <img src="assets/20.png" alt="Manos decorando una torta con amor" class="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover object-center">
+                    <img src="assets/20.png" alt="Manos decorando una torta con amor" class="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover object-center" loading="lazy">
                 </div>
             </div>
         </section>
@@ -94,7 +94,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Producto 1: Tortas -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/9.png" alt="Torta de chocolate" class="w-full h-56 object-cover">
+                        <img src="assets/9.png" alt="Torta de chocolate" class="w-full h-56 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Tortas Personalizadas</h3>
                             <p class="text-gray-600 text-sm">Combina 15 bases y 21 rellenos. ¡Crea la torta de tus sueños para cualquier ocasión!</p>
@@ -103,7 +103,7 @@
 
                     <!-- Producto 2: Suspiros -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/background.png" alt="Suspiros de merengue de colores" class="w-full h-56 object-cover">
+                        <img src="assets/background.png" alt="Suspiros de merengue de colores" class="w-full h-56 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Suspiros Tradicionales</h3>
                             <p class="text-gray-600 text-sm">Nuestro producto estrella. Ligeros, dulces y perfectos para despertar grandes sonrisas.</p>
@@ -112,7 +112,7 @@
 
                     <!-- Producto 3: Brownies & más -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/8.png" alt="Brownies de chocolate" class="w-full h-56 object-cover">
+                        <img src="assets/8.png" alt="Brownies de chocolate" class="w-full h-56 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Brownies y Galletas</h3>
                             <p class="text-gray-600 text-sm">El bocado perfecto para acompañar un café o calmar un antojo. ¡Puro chocolate!</p>
@@ -121,7 +121,7 @@
 
                     <!-- Producto 4: Postres Fríos -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/27.png" alt="Postre frío en un vaso" class="w-full h-56 object-cover">
+                        <img src="assets/27.png" alt="Postre frío en un vaso" class="w-full h-56 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Postres Fríos y Yogur</h3>
                             <p class="text-gray-600 text-sm">Opciones refrescantes y deliciosas, incluyendo nuestro cremoso yogur artesanal.</p>
@@ -246,7 +246,7 @@
                  <!-- Mobile Carousel -->
                 <div id="mobile-gallery-container" class="md:hidden relative w-full h-[400px] mx-auto overflow-hidden rounded-lg shadow-xl">
                     <div id="mobile-gallery-slide" class="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-500 ease-in-out">
-                        <img class="h-full w-full object-cover" src="" alt="Pastel de Suspiros">
+                        <img class="h-full w-full object-cover" src="" alt="Pastel de Suspiros" loading="lazy">
                     </div>
                     <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/60 hover:bg-white/90 p-3 rounded-full shadow-md z-10 transition-all">
                         <svg class="w-6 h-6 text-sus-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
@@ -379,7 +379,7 @@
                 initialImages.forEach((imgSrc, index) => {
                     galleryContainer.innerHTML += `
                         <div class="gallery-carousel-slot ${layoutClasses[index]} rounded-lg shadow-xl overflow-hidden">
-                            <img class="h-full w-full object-cover" src="${imgSrc}" alt="Pastel de Suspiros ${index + 1}">
+                            <img class="h-full w-full object-cover" src="${imgSrc}" alt="Pastel de Suspiros ${index + 1}" loading="lazy">
                         </div>
                     `;
                 });
@@ -400,6 +400,7 @@
                         
                         const slot = gallerySlots[slotIndexToReplace];
                         const imgElement = slot.querySelector('img');
+                        imgElement.setAttribute('loading', 'lazy');
                         
                         const oldImageSrc = imagesInUse[slotIndexToReplace];
                         const newImageSrc = availableImages[newImageIndex];

@@ -396,12 +396,10 @@
                 `;
 
                 // Llenamos los otros 3 paneles con imágenes generales
-                let tempShuffledGeneralImages = [...shuffledGeneralImages]; // Hacemos una copia para no alterar el original de forma inesperada
+                let tempShuffledGeneralImages = [...shuffledGeneralImages];
                 for (let i = 0; i < 3; i++) {
                     let image = tempShuffledGeneralImages.pop();
                     if (!image) {
-                        // Si por alguna razón nos quedamos sin imágenes generales aquí, recargamos y barajamos el array original.
-                        // Esto es un fallback, no debería suceder con la cantidad de imágenes actuales.
                         tempShuffledGeneralImages = shuffleArray([...generalImageSources]);
                         image = tempShuffledGeneralImages.pop();
                     }
@@ -412,11 +410,11 @@
                         </div>
                     `;
                 }
-                galleryContainer.innerHTML = carouselHtml; // Asignamos el HTML una sola vez
+                galleryContainer.innerHTML = carouselHtml;
                 
                 const gallerySlots = document.querySelectorAll('.gallery-carousel-slot');
                 if (gallerySlots.length > 0 && galleryImageSources.length > gallerySlots.length) {
-                    let imagesInUse = desktopImagesInUse; // Usamos las imágenes ya inicializadas
+                    let imagesInUse = desktopImagesInUse;
                     let availableExclusiveImages = exclusiveImages.filter(img => img !== imagesInUse[0]);
                     let availableGeneralImages = generalImageSources.filter(img => !imagesInUse.includes(img) && !exclusiveImages.includes(img));
 
@@ -429,13 +427,11 @@
                         let newImageSrc;
 
                         if (slotIndexToReplace === 0) {
-                            // Para el primer panel, usa imágenes exclusivas
                             if (availableExclusiveImages.length === 0) {
                                 availableExclusiveImages = exclusiveImages.filter(img => img !== oldImageSrc);
                             }
                             newImageSrc = availableExclusiveImages.splice(Math.floor(Math.random() * availableExclusiveImages.length), 1)[0];
                         } else {
-                            // Para los otros paneles, usa imágenes generales
                             if (availableGeneralImages.length === 0) {
                                 availableGeneralImages = generalImageSources.filter(img => !imagesInUse.includes(img) && img !== oldImageSrc);
                             }
@@ -453,11 +449,9 @@
                         }, 600);
 
                         imagesInUse[slotIndexToReplace] = newImageSrc;
-                        // Si la imagen vieja no es exclusiva del slot 0 y no es del slot 0, la añadimos a las disponibles generales
                         if (oldImageSrc && slotIndexToReplace !== 0 && !exclusiveImages.includes(oldImageSrc)) {
                             availableGeneralImages.push(oldImageSrc);
                         }
-                        // Si la imagen vieja es del slot 0 y es exclusiva, la añadimos a las disponibles exclusivas
                         else if (oldImageSrc && slotIndexToReplace === 0 && exclusiveImages.includes(oldImageSrc)) {
                             availableExclusiveImages.push(oldImageSrc);
                         }

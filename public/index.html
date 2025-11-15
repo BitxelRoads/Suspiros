@@ -16,7 +16,6 @@
     <header id="header" class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-2">
-                <!-- El logo no debe tener lazy loading -->
                 <img src="assets/logo.png" alt="Logo Suspiros Pastelería" class="h-12 w-12 animate-slide-in-left-subtle">
                 <span class="font-fancy text-2xl text-sus-dark animate-slide-in-left-subtle">Suspiros</span>
             </a>
@@ -50,7 +49,6 @@
         <!-- HERO -->
         <section class="relative h-screen flex items-center justify-center pt-20">
             <div class="absolute inset-0 bg-black opacity-30"></div>
-             <!-- La imagen del Hero no debe tener lazy loading -->
             <img src="assets/background.png" alt="Torta artesanal decorada con flores" class="absolute inset-0 w-full h-full object-cover">
             <div class="relative z-10 text-center p-10 flex flex-col items-center bg-white/10 rounded-2xl backdrop-blur-sm">
                 <img src="assets/suspiros_letra.png" alt="Letra de Suspiros" class="drop-shadow-white-md animate-slide-in-left-subtle opacity-0 [animation-delay:0.2s]">
@@ -193,15 +191,17 @@
             </div>
         </section>
 
-        <!-- GALERÍA (Sin cambios aquí, el JS se encarga) -->
+        <!-- GALERÍA CON CARRUSEL DINÁMICO -->
         <section id="galeria" class="py-20 bg-white">
             <div class="container mx-auto px-6 text-center">
                  <h2 class="text-4xl font-fancy mb-4">Galería de Dulces Momentos</h2>
                  <p class="max-w-2xl mx-auto text-gray-600 mb-12">Cada foto es una historia de celebración. Inspírate con nuestras creaciones o síguenos en Instagram para no perderte ninguna.</p>
                  
+                 <!-- Carrusel para Móvil (Visible solo en móvil) -->
                  <div id="mobile-gallery-container" class="relative md:hidden w-full max-w-xl mx-auto h-[400px] overflow-hidden rounded-lg shadow-xl">
                     <div id="mobile-gallery-slide" class="relative w-full h-full">
-                        <img src="assets/1.png" alt="Pastel de Suspiros" class="w-full h-full object-cover">
+                        <!-- CAMBIO CLAVE: El 'src' ahora está vacío para que lo llene el JavaScript -->
+                        <img src="" alt="Pastel de Suspiros" class="w-full h-full object-cover">
                     </div>
                     <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/60 hover:bg-white/90 rounded-full h-10 w-10 flex items-center justify-center transition">
                         <i class="fas fa-chevron-left text-sus-dark"></i>
@@ -211,7 +211,9 @@
                     </button>
                  </div>
 
+                 <!-- Galería para Escritorio (Visible solo en escritorio) -->
                  <div id="desktop-gallery-container" class="hidden md:grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto h-[600px] md:h-[500px]">
+                    <!-- Este div se llenará dinámicamente -->
                  </div>
             </div>
         </section>
@@ -222,7 +224,7 @@
         <div class="container mx-auto px-6 py-12">
             <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
                 <div>
-                    <img src="assets/logo.png" alt="Logo Suspiros Pastelería" class="h-12 w-12 mx-auto md:mx-0">
+                    <img src="assets/logo.png" alt="Logo Suspiros Pastelería" class="h-12 w-12 mx-auto md:mx-0" loading="lazy">
                     <h3 class="font-fancy text-3xl mb-2 text-white mt-3">Suspiros</h3>
                     <p class="text-gray-400 text-sm">Juntos horneamos bellos momentos.</p>
                 </div>
@@ -252,7 +254,7 @@
         </div>
     </footer>
 
-    <!-- SCRIPT (Sin cambios) -->
+    <!-- ===== JAVASCRIPT (sin cambios) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuBtn = document.getElementById('menu-btn');
@@ -287,7 +289,7 @@
                     let currentIndex = 0;
                     shuffleArray(galleryImageSources);
                     
-                    if (mobileImg.src.endsWith(galleryImageSources[0])) {
+                    if (mobileImg.src && mobileImg.src.endsWith(galleryImageSources[0])) {
                         galleryImageSources.push(galleryImageSources.shift());
                     }
 
@@ -337,7 +339,7 @@
                     initialImages.forEach((imgSrc, index) => {
                         desktopGalleryContainer.innerHTML += `
                             <div class="gallery-carousel-slot h-full w-full rounded-lg shadow-xl overflow-hidden">
-                                <img class="h-full w-full object-cover" src="${imgSrc}" alt="Pastel de Suspiros ${index + 1}">
+                                <img class="h-full w-full object-cover" src="${imgSrc}" alt="Pastel de Suspiros ${index + 1}" loading="lazy">
                             </div>
                         `;
                     });

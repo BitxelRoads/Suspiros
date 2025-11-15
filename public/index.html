@@ -16,6 +16,7 @@
     <header id="header" class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-2">
+                <!-- El logo no debe tener lazy loading -->
                 <img src="assets/logo.png" alt="Logo Suspiros Pastelería" class="h-12 w-12 animate-slide-in-left-subtle">
                 <span class="font-fancy text-2xl text-sus-dark animate-slide-in-left-subtle">Suspiros</span>
             </a>
@@ -49,6 +50,7 @@
         <!-- HERO -->
         <section class="relative h-screen flex items-center justify-center pt-20">
             <div class="absolute inset-0 bg-black opacity-30"></div>
+             <!-- La imagen del Hero no debe tener lazy loading -->
             <img src="assets/background.png" alt="Torta artesanal decorada con flores" class="absolute inset-0 w-full h-full object-cover">
             <div class="relative z-10 text-center p-10 flex flex-col items-center bg-white/10 rounded-2xl backdrop-blur-sm">
                 <img src="assets/suspiros_letra.png" alt="Letra de Suspiros" class="drop-shadow-white-md animate-slide-in-left-subtle opacity-0 [animation-delay:0.2s]">
@@ -73,7 +75,7 @@
                     </p>
                 </div>
                 <div class="order-1 md:order-2">
-                    <img src="assets/20.png" alt="Manos decorando una torta con amor" class="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover object-center">
+                    <img src="assets/20.png" alt="Manos decorando una torta con amor" class="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover object-center" loading="lazy">
                 </div>
             </div>
         </section>
@@ -87,28 +89,28 @@
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/9.png" alt="Torta de chocolate" class="w-full h-56 object-cover">
+                        <img src="assets/9.png" alt="Torta de chocolate" class="w-full h-56 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Tortas Personalizadas</h3>
                             <p class="text-gray-600 text-sm">Combina 15 bases y 21 rellenos. ¡Crea la torta de tus sueños para cualquier ocasión!</p>
                         </div>
                     </div>
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/background.png" alt="Suspiros de merengue de colores" class="w-full h-56 object-cover">
+                        <img src="assets/background.png" alt="Suspiros de merengue de colores" class="w-full h-56 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Suspiros Tradicionales</h3>
                             <p class="text-gray-600 text-sm">Nuestro producto estrella. Ligeros, dulces y perfectos para despertar grandes sonrisas.</p>
                         </div>
                     </div>
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/8.png" alt="Brownies de chocolate" class="w-full h-56 object-cover">
+                        <img src="assets/8.png" alt="Brownies de chocolate" class="w-full h-56 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Brownies y Galletas</h3>
                             <p class="text-gray-600 text-sm">El bocado perfecto para acompañar un café o calmar un antojo. ¡Puro chocolate!</p>
                         </div>
                     </div>
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/27.png" alt="Postre frío en un vaso" class="w-full h-56 object-cover">
+                        <img src="assets/27.png" alt="Postre frío en un vaso" class="w-full h-56 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Postres Fríos y Yogur</h3>
                             <p class="text-gray-600 text-sm">Opciones refrescantes y deliciosas, incluyendo nuestro cremoso yogur artesanal.</p>
@@ -191,16 +193,14 @@
             </div>
         </section>
 
-        <!-- GALERÍA CON CARRUSEL DINÁMICO -->
+        <!-- GALERÍA (Sin cambios aquí, el JS se encarga) -->
         <section id="galeria" class="py-20 bg-white">
             <div class="container mx-auto px-6 text-center">
                  <h2 class="text-4xl font-fancy mb-4">Galería de Dulces Momentos</h2>
                  <p class="max-w-2xl mx-auto text-gray-600 mb-12">Cada foto es una historia de celebración. Inspírate con nuestras creaciones o síguenos en Instagram para no perderte ninguna.</p>
                  
-                 <!-- Carrusel para Móvil (Visible solo en móvil) -->
                  <div id="mobile-gallery-container" class="relative md:hidden w-full max-w-xl mx-auto h-[400px] overflow-hidden rounded-lg shadow-xl">
                     <div id="mobile-gallery-slide" class="relative w-full h-full">
-                        <!-- CAMBIO CLAVE: Se añade una imagen por defecto para que no esté vacío -->
                         <img src="assets/1.png" alt="Pastel de Suspiros" class="w-full h-full object-cover">
                     </div>
                     <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/60 hover:bg-white/90 rounded-full h-10 w-10 flex items-center justify-center transition">
@@ -211,9 +211,7 @@
                     </button>
                  </div>
 
-                 <!-- Galería para Escritorio (Visible solo en escritorio) -->
                  <div id="desktop-gallery-container" class="hidden md:grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto h-[600px] md:h-[500px]">
-                    <!-- Este div se llenará dinámicamente -->
                  </div>
             </div>
         </section>
@@ -254,10 +252,9 @@
         </div>
     </footer>
 
-    <!-- ===== JAVASCRIPT ===== -->
+    <!-- SCRIPT (Sin cambios) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- Lógica del Menú Móvil y Header ---
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const header = document.getElementById('header');
@@ -269,7 +266,6 @@
                 header.classList.toggle('shadow-xl', window.scrollY > 50);
             });
 
-            // --- Lógica de la Galería (Móvil y Escritorio) con Carga Diferida ---
             const gallerySection = document.getElementById('galeria');
             const galleryImageSources = [
                 'assets/1.png', 'assets/2.png', 'assets/3.png', 'assets/4.png', 'assets/5.png', 'assets/6.png', 'assets/7.png',
@@ -282,9 +278,7 @@
             const shuffleArray = (array) => array.sort(() => 0.5 - Math.random());
             
             const initGalleries = () => {
-                // LÓGICA PARA CARRUSEL MÓVIL
                 const mobileContainer = document.getElementById('mobile-gallery-container');
-                // offsetParent es null si el elemento está oculto con 'display: none'
                 if (mobileContainer && mobileContainer.offsetParent !== null) {
                     const mobileImg = document.querySelector('#mobile-gallery-slide img');
                     const prevBtn = document.getElementById('prev-btn');
@@ -293,7 +287,6 @@
                     let currentIndex = 0;
                     shuffleArray(galleryImageSources);
                     
-                    // Asegurarse de que la imagen inicial no sea la misma que la del HTML si es posible
                     if (mobileImg.src.endsWith(galleryImageSources[0])) {
                         galleryImageSources.push(galleryImageSources.shift());
                     }
@@ -333,10 +326,9 @@
                     }
                     nextBtn.addEventListener('click', nextImage);
                     prevBtn.addEventListener('click', prevImage);
-                    showImage(currentIndex); // Carga la primera imagen aleatoria
+                    showImage(currentIndex);
                 }
                 
-                // LÓGICA PARA GALERÍA DE ESCRITORIO
                 const desktopGalleryContainer = document.getElementById('desktop-gallery-container');
                 if (desktopGalleryContainer && desktopGalleryContainer.offsetParent !== null) {
                     shuffleArray(galleryImageSources);
@@ -383,7 +375,6 @@
                 }
             };
             
-            // --- Intersection Observer para Carga Diferida ---
             const galleryObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {

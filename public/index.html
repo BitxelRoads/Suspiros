@@ -10,10 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
 </head>
 <body class="bg-sus-cream font-sans text-sus-dark">
-
 
     <header id="header" class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
@@ -30,14 +28,12 @@
                     Haz tu Pedido
                 </a>
             </div>
-
             <div class="md:hidden">
                 <button id="menu-btn" class="text-sus-dark focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
-        
         <div id="mobile-menu" class="hidden md:hidden animate-slide-in-right-subtle bg-white/95 backdrop-blur-sm">
             <a href="#historia" class="block py-2 px-6 text-sm text-gray-700 hover:bg-sus-pink/20">Nuestra Historia</a>
             <a href="#productos" class="block py-2 px-6 text-sm text-gray-700 hover:bg-sus-pink/20">Productos</a>
@@ -50,11 +46,10 @@
     </header>
 
     <main>
-        <!--  HERO  -->   
+        <!-- HERO -->
         <section class="relative h-screen flex items-center justify-center pt-20">
             <div class="absolute inset-0 bg-black opacity-30"></div>
-            <img src="assets/background.png" alt="Torta artesanal decorada con flores" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-            
+            <img src="assets/background.png" alt="Torta artesanal decorada con flores" class="absolute inset-0 w-full h-full object-cover">
             <div class="relative z-10 text-center p-10 flex flex-col items-center bg-white/10 rounded-2xl backdrop-blur-sm">
                 <img src="assets/suspiros_letra.png" alt="Letra de Suspiros" class="drop-shadow-white-md animate-slide-in-left-subtle opacity-0 [animation-delay:0.2s]">
                 <p class="text-4xl md:text-4xl text-black mb-8 font-handwritten max-w-xl drop-shadow-white-md animate-slide-in-right-subtle opacity-0 [animation-delay:0.2s]">Donde cada detalle nace con amor y se transforma en momentos inolvidables.</p>
@@ -64,7 +59,7 @@
             </div>
         </section>
 
-        <!--   NUESTRA HISTORIA -->
+        <!-- NUESTRA HISTORIA -->
         <section id="historia" class="py-20 bg-white">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
@@ -78,58 +73,48 @@
                     </p>
                 </div>
                 <div class="order-1 md:order-2">
-                    <img src="assets/20.png" alt="Manos decorando una torta con amor" class="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover object-center" loading="lazy">
+                    <img src="assets/20.png" alt="Manos decorando una torta con amor" class="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover object-center">
                 </div>
             </div>
         </section>
         
-        <!--  PRODUCTOS -->
+        <!-- PRODUCTOS -->
         <section id="productos" class="py-20 bg-sus-cream">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl font-fancy mb-4">Nuestros Dulces Artesanales</h2>
                 <p class="max-w-2xl mx-auto text-gray-600 mb-12">
                     Desde tortas personalizadas hasta nuestros famosos suspiros. Todo hecho bajo pedido para garantizar la máxima frescura.
                 </p>
-
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Producto 1: Tortas -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/9.png" alt="Torta de chocolate" class="w-full h-56 object-cover" loading="lazy">
+                        <img src="assets/9.png" alt="Torta de chocolate" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Tortas Personalizadas</h3>
                             <p class="text-gray-600 text-sm">Combina 15 bases y 21 rellenos. ¡Crea la torta de tus sueños para cualquier ocasión!</p>
                         </div>
                     </div>
-
-                    <!-- Producto 2: Suspiros -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/background.png" alt="Suspiros de merengue de colores" class="w-full h-56 object-cover" loading="lazy">
+                        <img src="assets/background.png" alt="Suspiros de merengue de colores" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Suspiros Tradicionales</h3>
                             <p class="text-gray-600 text-sm">Nuestro producto estrella. Ligeros, dulces y perfectos para despertar grandes sonrisas.</p>
                         </div>
                     </div>
-
-                    <!-- Producto 3: Brownies & más -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/8.png" alt="Brownies de chocolate" class="w-full h-56 object-cover" loading="lazy">
+                        <img src="assets/8.png" alt="Brownies de chocolate" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Brownies y Galletas</h3>
                             <p class="text-gray-600 text-sm">El bocado perfecto para acompañar un café o calmar un antojo. ¡Puro chocolate!</p>
                         </div>
                     </div>
-
-                    <!-- Producto 4: Postres Fríos -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="assets/27.png" alt="Postre frío en un vaso" class="w-full h-56 object-cover" loading="lazy">
+                        <img src="assets/27.png" alt="Postre frío en un vaso" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-fancy mb-2">Postres Fríos y Yogur</h3>
                             <p class="text-gray-600 text-sm">Opciones refrescantes y deliciosas, incluyendo nuestro cremoso yogur artesanal.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Botón centrado -->
                 <div class="mt-16 flex justify-center">
                     <a href="assets/Suspiros.pdf" target="_blank"
                     class="bg-sus-blue text-white font-bold py-3 px-8 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105 shadow-lg">
@@ -139,7 +124,7 @@
             </div>
         </section>
         
-        <!-- SECCIÓN LÍNEAS ESPECIALES -->
+        <!-- LÍNEAS ESPECIALES -->
         <section id="especiales" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
@@ -147,29 +132,16 @@
                      <p class="max-w-2xl mx-auto text-gray-600">Creemos que todos merecen un momento dulce. Por eso, creamos líneas especiales con el mismo cuidado y sabor.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-10">
-                    <!-- Línea Cero Azúcar -->
                     <div class="bg-sus-blue/20 p-8 rounded-lg text-center flex flex-col items-center">
                         <div class="bg-sus-blue text-white rounded-full h-16 w-16 flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-leaf h-8 w-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                               <path d="M5 21c.5-4.5 2.5-8 7-10"></path>
-                               <path d="M9 18c6.218 0 10.5-3.288 11-12V4h-4.014c-9 0-9.986 7-9.986 12z"></path>
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-leaf h-8 w-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 21c.5-4.5 2.5-8 7-10"></path><path d="M9 18c6.218 0 10.5-3.288 11-12V4h-4.014c-9 0-9.986 7-9.986 12z"></path></svg>
                         </div>
                         <h3 class="text-2xl font-fancy mb-3">Línea Cero Azúcar</h3>
                         <p class="text-gray-700">7 variedades de tortas saludables para diabéticos. Disfruta sin preocupaciones, con ingredientes que cuidan tu salud y brindan el máximo sabor.</p>
                     </div>
-                    <!-- Línea Mascotas -->
                      <div class="bg-sus-yellow/30 p-8 rounded-lg text-center flex flex-col items-center">
                         <div class="bg-sus-yellow text-gray-800 rounded-full h-16 w-16 flex items-center justify-center mb-4">
-                           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-paw h-8 w-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                              <path d="M10 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" />
-                              <path d="M14 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(90 12 19)" />
-                              <path d="M18 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(180 16 19)" />
-                              <path d="M22 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(270 20 19)" />
-                              <path d="M12 5a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(45 12 5)" />
-                            </svg>
+                           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-paw h-8 w-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" /><path d="M14 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(90 12 19)" /><path d="M18 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(180 16 19)" /><path d="M22 19a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(270 20 19)" /><path d="M12 5a2 2 0 1 1 -1.414 3.414l-2.586 -2.586a2 2 0 0 1 0 -2.828l2.586 -2.586a2 2 0 0 1 2.828 0l2.586 2.586a2 2 0 0 1 0 2.828l-2.586 2.586a2 2 0 0 1 -1.414 3.414z" transform="rotate(45 12 5)" /></svg>
                         </div>
                         <h3 class="text-2xl font-fancy mb-3">Línea para Mascotas</h3>
                         <p class="text-gray-700">¡Ellos también celebran! Tortas, muffins y snacks a base de pollo, carne y verduras, diseñados para ser nutritivos y seguros para tus peluditos.</p>
@@ -178,83 +150,71 @@
             </div>
         </section>
         
-        <!-- SECCIÓN CÓMO FUNCIONA -->
+        <!-- CÓMO FUNCIONA -->
         <section id="pedidos" class="relative py-20 bg-sus-cream overflow-hidden">
-        
-        <!-- 🎥 Video de fondo -->
-        <video autoplay muted loop playsinline 
-            class="absolute inset-0 w-full h-full object-cover opacity-30">
-            <source src="/assets/video.mp4" type="video/mp4">
-            Tu navegador no soporta video en HTML5.
-        </video>
-
-        <!-- Capa de color suave (opcional, mejora contraste del texto) -->
-        <div class="absolute inset-0 bg-white/30"></div>
-
-        <!-- Contenido principal -->
-        <div class="relative z-10 container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-fancy mb-4">Tu Pedido en 3 Simples Pasos</h2>
-            <p class="max-w-2xl mx-auto text-gray-600 mb-12">
-            Somos una pastelería virtual, cada pedido se elabora especialmente para ti. ¡Así garantizamos frescura y calidad!
-            </p>
-
-            <div class="grid md:grid-cols-3 gap-8 text-left">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="flex items-center mb-4">
-                <div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">1</div>
-                <h3 class="text-lg font-semibold">Contacta y Personaliza</h3>
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-30">
+                <source src="assets/video.mp4" type="video/mp4">
+                Tu navegador no soporta video en HTML5.
+            </video>
+            <div class="absolute inset-0 bg-white/30"></div>
+            <div class="relative z-10 container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-fancy mb-4">Tu Pedido en 3 Simples Pasos</h2>
+                <p class="max-w-2xl mx-auto text-gray-600 mb-12">
+                    Somos una pastelería virtual, cada pedido se elabora especialmente para ti. ¡Así garantizamos frescura y calidad!
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">1</div>
+                            <h3 class="text-lg font-semibold">Contacta y Personaliza</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">Escríbenos por WhatsApp. Cuéntanos tu idea, elige tus sabores y crearemos juntos el postre perfecto. ¡Recuerda pedir con 3 días de anticipación!</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">2</div>
+                            <h3 class="text-lg font-semibold">Confirma tu Pedido</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">Para reservar tu espacio en nuestra agenda, solicitamos un anticipo del 50%. Así nos ponemos manos a la obra exclusivamente para ti.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">3</div>
+                            <h3 class="text-lg font-semibold">Recibe y Disfruta</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm">Coordinamos la entrega a domicilio o en un punto de encuentro. Tu pedido llegará fresco, puntual y listo para crear un bello momento.</p>
+                    </div>
                 </div>
-                <p class="text-gray-600 text-sm">Escríbenos por WhatsApp. Cuéntanos tu idea, elige tus sabores y crearemos juntos el postre perfecto. ¡Recuerda pedir con 3 días de anticipación!</p>
+                <a href="https://wa.me/573218191272?text=Hola!%20Quisiera%20iniciar%20mi%20pedido." target="_blank" class="mt-12 inline-block bg-sus-blue text-white font-bold text-lg py-3 px-10 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105 shadow-lg">
+                    ¡Empezar mi Pedido Ahora!
+                </a>
             </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="flex items-center mb-4">
-                <div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">2</div>
-                <h3 class="text-lg font-semibold">Confirma tu Pedido</h3>
-                </div>
-                <p class="text-gray-600 text-sm">Para reservar tu espacio en nuestra agenda, solicitamos un anticipo del 50%. Así nos ponemos manos a la obra exclusivamente para ti.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="flex items-center mb-4">
-                <div class="bg-sus-pink text-white font-bold rounded-full h-10 w-10 flex items-center justify-center text-xl mr-4">3</div>
-                <h3 class="text-lg font-semibold">Recibe y Disfruta</h3>
-                </div>
-                <p class="text-gray-600 text-sm">Coordinamos la entrega a domicilio o en un punto de encuentro. Tu pedido llegará fresco, puntual y listo para crear un bello momento.</p>
-            </div>
-            </div>
-
-            <a href="https://wa.me/573218191272?text=Hola!%20Quisiera%20iniciar%20mi%20pedido." target="_blank" 
-            class="mt-12 inline-block bg-sus-blue text-white font-bold text-lg py-3 px-10 rounded-full hover:bg-sus-pink hover:text-sus-dark transition-all transform hover:scale-105 shadow-lg">
-            ¡Empezar mi Pedido Ahora!
-            </a>
-        </div>
         </section>
 
-        
-        <!-- SECCIÓN GALERÍA CON CARRUSEL DINÁMICO -->
+        <!-- GALERÍA CON CARRUSEL DINÁMICO -->
         <section id="galeria" class="py-20 bg-white">
             <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-4xl font-fancy mb-4">Galería</h2>
+                 <h2 class="text-4xl font-fancy mb-4">Galería de Dulces Momentos</h2>
                  <p class="max-w-2xl mx-auto text-gray-600 mb-12">Cada foto es una historia de celebración. Inspírate con nuestras creaciones o síguenos en Instagram para no perderte ninguna.</p>
                  
-                 <!-- Desktop Carousel -->
-                 <div id="gallery-container" class="hidden md:flex justify-center items-end gap-4 max-w-5xl mx-auto h-[500px]">
-                    <!-- Este div se llenará dinámicamente -->
+                 <!-- Carrusel para Móvil (Visible solo en móvil) -->
+                 <div id="mobile-gallery-container" class="relative md:hidden w-full max-w-xl mx-auto h-[400px] overflow-hidden rounded-lg shadow-xl">
+                    <div id="mobile-gallery-slide" class="relative w-full h-full">
+                        <!-- CAMBIO CLAVE: Se añade una imagen por defecto para que no esté vacío -->
+                        <img src="assets/1.png" alt="Pastel de Suspiros" class="w-full h-full object-cover">
+                    </div>
+                    <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/60 hover:bg-white/90 rounded-full h-10 w-10 flex items-center justify-center transition">
+                        <i class="fas fa-chevron-left text-sus-dark"></i>
+                    </button>
+                    <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/60 hover:bg-white/90 rounded-full h-10 w-10 flex items-center justify-center transition">
+                        <i class="fas fa-chevron-right text-sus-dark"></i>
+                    </button>
                  </div>
 
-                 <!-- Mobile Carousel -->
-                <div id="mobile-gallery-container" class="md:hidden relative w-full h-[400px] mx-auto overflow-hidden rounded-lg shadow-xl">
-                    <div id="mobile-gallery-slide" class="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-500 ease-in-out">
-                        <img class="h-full w-full object-cover" src="" alt="Pastel de Suspiros" loading="lazy">
-                    </div>
-                    <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/60 hover:bg-white/90 p-3 rounded-full shadow-md z-10 transition-all">
-                        <svg class="w-6 h-6 text-sus-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    </button>
-                    <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/60 hover:bg-white/90 p-3 rounded-full shadow-md z-10 transition-all">
-                        <svg class="w-6 h-6 text-sus-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
-                </div>
+                 <!-- Galería para Escritorio (Visible solo en escritorio) -->
+                 <div id="desktop-gallery-container" class="hidden md:grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto h-[600px] md:h-[500px]">
+                    <!-- Este div se llenará dinámicamente -->
+                 </div>
             </div>
         </section>
     </main>
@@ -263,13 +223,11 @@
     <footer class="bg-sus-dark text-white">
         <div class="container mx-auto px-6 py-12">
             <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
-                <!-- Logo y Slogan -->
                 <div>
-                    <img src="assets/logo.png" alt="Logo Suspiros Pastelería" class="h-12 w-12 animate-slide-in-left-subtle">
-                    <h3 class="font-fancy text-3xl mb-2 text-white">Suspiros</h3>
+                    <img src="assets/logo.png" alt="Logo Suspiros Pastelería" class="h-12 w-12 mx-auto md:mx-0">
+                    <h3 class="font-fancy text-3xl mb-2 text-white mt-3">Suspiros</h3>
                     <p class="text-gray-400 text-sm">Juntos horneamos bellos momentos.</p>
                 </div>
-                <!-- Navegación -->
                 <div>
                     <h4 class="font-semibold mb-3 text-white">Explora</h4>
                     <ul class="space-y-2 text-sm">
@@ -279,7 +237,6 @@
                         <li><a href="#pedidos" class="text-gray-400 hover:text-white">Cómo Pedir</a></li>
                     </ul>
                 </div>
-                <!-- Contacto -->
                 <div>
                     <h4 class="font-semibold mb-3 text-white">Contacto Directo</h4>
                     <div class="flex justify-center md:justify-start space-x-4">
@@ -297,14 +254,13 @@
         </div>
     </footer>
 
-    <!-- ===== JAVASCRIPT -->
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Lógica del Menú Móvil y Header ---
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const header = document.getElementById('header');
-
             menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
             mobileMenu.addEventListener('click', (e) => {
                 if (e.target.tagName === 'A') mobileMenu.classList.add('hidden');
@@ -313,152 +269,131 @@
                 header.classList.toggle('shadow-xl', window.scrollY > 50);
             });
 
-            // --- Lógica del Carrusel Dinámico de la Galería ---
-            const galleryImageSources = Array.from(new Set([
+            // --- Lógica de la Galería (Móvil y Escritorio) con Carga Diferida ---
+            const gallerySection = document.getElementById('galeria');
+            const galleryImageSources = [
                 'assets/1.png', 'assets/2.png', 'assets/3.png', 'assets/4.png', 'assets/5.png', 'assets/6.png', 'assets/7.png',
                 'assets/8.png', 'assets/9.png', 'assets/10.png', 'assets/11.png', 'assets/12.png', 'assets/13.png',
                 'assets/14.png', 'assets/15.png', 'assets/16.png', 'assets/17.png', 'assets/18.png', 'assets/19.png', 'assets/20.png',
                 'assets/21.png', 'assets/22.png', 'assets/23.png', 'assets/24.png', 'assets/25.png', 'assets/26.png', 'assets/27.png',
                 'assets/28.png', 'assets/29.png', 'assets/30.png', 'assets/32.png'
-            ]));
+            ];
             
             const shuffleArray = (array) => array.sort(() => 0.5 - Math.random());
-            // shuffleArray(galleryImageSources); // No shufflamos el array completo
-
-            const exclusiveImages = [
-                'assets/6.png', 'assets/16.png', 'assets/17.png', 'assets/18.png', 'assets/19.png'
-            ];
-
-            const generalImageSources = galleryImageSources.filter(img => !exclusiveImages.includes(img));
-            const shuffledGeneralImages = shuffleArray([...generalImageSources]);
-
-            if (window.innerWidth < 768) {
-                // --- Lógica del Carrusel Móvil ---
-                const mobileGalleryContainer = document.getElementById('mobile-gallery-container');
-                const mobileImg = document.querySelector('#mobile-gallery-slide img');
-                const prevBtn = document.getElementById('prev-btn');
-                const nextBtn = document.getElementById('next-btn');
-                const mobileGallerySlide = document.getElementById('mobile-gallery-slide');
-
-                let currentIndex = 0;
-
-                function showImage(index) {
-                    mobileImg.src = galleryImageSources[index];
-                }
-
-                function nextImage() {
-                    currentIndex = (currentIndex + 1) % galleryImageSources.length;
-                    showImage(currentIndex);
-                    mobileGallerySlide.style.transition = 'none';
-                    mobileGallerySlide.style.transform = 'translateX(100%)';
-
-                    requestAnimationFrame(() => {
-                        mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
-                        mobileGallerySlide.style.transform = 'translateX(0)';
-                    });
-                }
-
-                function prevImage() {
-                    currentIndex = (currentIndex - 1 + galleryImageSources.length) % galleryImageSources.length;
-                    showImage(currentIndex);
-                    mobileGallerySlide.style.transition = 'none';
-                    mobileGallerySlide.style.transform = 'translateX(-100%)';
-
-                    requestAnimationFrame(() => {
-                        mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
-                        mobileGallerySlide.style.transform = 'translateX(0)';
-                    });
-                }
-
-                nextBtn.addEventListener('click', nextImage);
-                prevBtn.addEventListener('click', prevImage);
-
-                showImage(currentIndex);
-
-                setInterval(nextImage, 4000);
-
-            } else {
-                // --- Lógica para el carrusel de escritorio ---
-                const galleryContainer = document.getElementById('gallery-container');
-                const layoutClasses = ['w-1/4 h-3/4', 'w-1/4 h-full', 'w-1/4 h-full', 'w-1/4 h-3/4'];
-
-                let desktopImagesInUse = [];
-                let carouselHtml = '';
-
-                // Aseguramos que el primer panel tenga una imagen exclusiva
-                let currentExclusiveImage = exclusiveImages[Math.floor(Math.random() * exclusiveImages.length)];
-                desktopImagesInUse.push(currentExclusiveImage);
-
-                carouselHtml += `
-                    <div class="gallery-carousel-slot ${layoutClasses[0]} rounded-lg shadow-xl overflow-hidden">
-                        <img class="h-full w-full object-cover" src="${currentExclusiveImage}" alt="Pastel de Suspiros 1" loading="lazy">
-                    </div>
-                `;
-
-                // Llenamos los otros 3 paneles con imágenes generales
-                let tempShuffledGeneralImages = [...shuffledGeneralImages];
-                for (let i = 0; i < 3; i++) {
-                    let image = tempShuffledGeneralImages.pop();
-                    if (!image) {
-                        tempShuffledGeneralImages = shuffleArray([...generalImageSources]);
-                        image = tempShuffledGeneralImages.pop();
+            
+            const initGalleries = () => {
+                // LÓGICA PARA CARRUSEL MÓVIL
+                const mobileContainer = document.getElementById('mobile-gallery-container');
+                // offsetParent es null si el elemento está oculto con 'display: none'
+                if (mobileContainer && mobileContainer.offsetParent !== null) {
+                    const mobileImg = document.querySelector('#mobile-gallery-slide img');
+                    const prevBtn = document.getElementById('prev-btn');
+                    const nextBtn = document.getElementById('next-btn');
+                    const mobileGallerySlide = document.getElementById('mobile-gallery-slide');
+                    let currentIndex = 0;
+                    shuffleArray(galleryImageSources);
+                    
+                    // Asegurarse de que la imagen inicial no sea la misma que la del HTML si es posible
+                    if (mobileImg.src.endsWith(galleryImageSources[0])) {
+                        galleryImageSources.push(galleryImageSources.shift());
                     }
-                    desktopImagesInUse.push(image);
-                    carouselHtml += `
-                        <div class="gallery-carousel-slot ${layoutClasses[i + 1]} rounded-lg shadow-xl overflow-hidden">
-                            <img class="h-full w-full object-cover" src="${image}" alt="Pastel de Suspiros ${i + 2}" loading="lazy">
-                        </div>
-                    `;
-                }
-                galleryContainer.innerHTML = carouselHtml;
-                
-                const gallerySlots = document.querySelectorAll('.gallery-carousel-slot');
-                if (gallerySlots.length > 0 && galleryImageSources.length > gallerySlots.length) {
-                    let imagesInUse = desktopImagesInUse;
-                    let availableExclusiveImages = exclusiveImages.filter(img => img !== imagesInUse[0]);
-                    let availableGeneralImages = generalImageSources.filter(img => !imagesInUse.includes(img) && !exclusiveImages.includes(img));
 
-                    setInterval(() => {
-                        const slotIndexToReplace = Math.floor(Math.random() * gallerySlots.length);
-                        const slot = gallerySlots[slotIndexToReplace];
-                        const imgElement = slot.querySelector('img');
-                        
-                        let oldImageSrc = imagesInUse[slotIndexToReplace];
-                        let newImageSrc;
+                    function showImage(index) {
+                        mobileImg.src = galleryImageSources[index];
+                    }
 
-                        if (slotIndexToReplace === 0) {
-                            if (availableExclusiveImages.length === 0) {
-                                availableExclusiveImages = exclusiveImages.filter(img => img !== oldImageSrc);
-                            }
-                            newImageSrc = availableExclusiveImages.splice(Math.floor(Math.random() * availableExclusiveImages.length), 1)[0];
-                        } else {
-                            if (availableGeneralImages.length === 0) {
-                                availableGeneralImages = generalImageSources.filter(img => !imagesInUse.includes(img) && img !== oldImageSrc);
-                            }
-                            newImageSrc = availableGeneralImages.splice(Math.floor(Math.random() * availableGeneralImages.length), 1)[0];
-                        }
-
-                        imgElement.classList.add('animate-fade-down-out');
+                    function nextImage() {
+                        mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
+                        mobileGallerySlide.style.transform = 'translateX(-100%)';
                         setTimeout(() => {
-                            imgElement.src = newImageSrc;
-                            imgElement.onload = () => {
-                                imgElement.classList.remove('animate-fade-down-out');
-                                imgElement.classList.add('animate-fade-down-in');
-                                setTimeout(() => imgElement.classList.remove('animate-fade-down-in'), 600);
-                            };
-                        }, 600);
+                            currentIndex = (currentIndex + 1) % galleryImageSources.length;
+                            showImage(currentIndex);
+                            mobileGallerySlide.style.transition = 'none';
+                            mobileGallerySlide.style.transform = 'translateX(100%)';
+                            setTimeout(() => {
+                                mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
+                                mobileGallerySlide.style.transform = 'translateX(0)';
+                            }, 20);
+                        }, 500);
+                    }
 
-                        imagesInUse[slotIndexToReplace] = newImageSrc;
-                        if (oldImageSrc && slotIndexToReplace !== 0 && !exclusiveImages.includes(oldImageSrc)) {
-                            availableGeneralImages.push(oldImageSrc);
-                        }
-                        else if (oldImageSrc && slotIndexToReplace === 0 && exclusiveImages.includes(oldImageSrc)) {
-                            availableExclusiveImages.push(oldImageSrc);
-                        }
-                        
-                    }, 4000);
+                    function prevImage() {
+                        mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
+                        mobileGallerySlide.style.transform = 'translateX(100%)';
+                        setTimeout(() => {
+                            currentIndex = (currentIndex - 1 + galleryImageSources.length) % galleryImageSources.length;
+                            showImage(currentIndex);
+                            mobileGallerySlide.style.transition = 'none';
+                            mobileGallerySlide.style.transform = 'translateX(-100%)';
+                            setTimeout(() => {
+                                mobileGallerySlide.style.transition = 'transform 0.5s ease-in-out';
+                                mobileGallerySlide.style.transform = 'translateX(0)';
+                            }, 20);
+                        }, 500);
+                    }
+                    nextBtn.addEventListener('click', nextImage);
+                    prevBtn.addEventListener('click', prevImage);
+                    showImage(currentIndex); // Carga la primera imagen aleatoria
                 }
-            }
+                
+                // LÓGICA PARA GALERÍA DE ESCRITORIO
+                const desktopGalleryContainer = document.getElementById('desktop-gallery-container');
+                if (desktopGalleryContainer && desktopGalleryContainer.offsetParent !== null) {
+                    shuffleArray(galleryImageSources);
+                    const initialImages = galleryImageSources.slice(0, 4);
+                    
+                    initialImages.forEach((imgSrc, index) => {
+                        desktopGalleryContainer.innerHTML += `
+                            <div class="gallery-carousel-slot h-full w-full rounded-lg shadow-xl overflow-hidden">
+                                <img class="h-full w-full object-cover" src="${imgSrc}" alt="Pastel de Suspiros ${index + 1}">
+                            </div>
+                        `;
+                    });
+
+                    const gallerySlots = document.querySelectorAll('.gallery-carousel-slot');
+                    if (gallerySlots.length > 0 && galleryImageSources.length > gallerySlots.length) {
+                        let imagesInUse = [...initialImages];
+                        let availableImages = galleryImageSources.filter(img => !imagesInUse.includes(img));
+                        setInterval(() => {
+                            if (availableImages.length === 0) {
+                                availableImages = galleryImageSources.filter(img => !imagesInUse.includes(img));
+                                if (availableImages.length === 0) return;
+                            }
+                            const slotIndexToReplace = Math.floor(Math.random() * gallerySlots.length);
+                            const newImageIndex = Math.floor(Math.random() * availableImages.length);
+                            const slot = gallerySlots[slotIndexToReplace];
+                            const imgElement = slot.querySelector('img');
+                            const oldImageSrc = imagesInUse[slotIndexToReplace];
+                            const newImageSrc = availableImages[newImageIndex];
+                            
+                            imgElement.classList.add('animate-fade-down-out');
+                            setTimeout(() => {
+                                imgElement.src = newImageSrc;
+                                imgElement.onload = () => {
+                                    imgElement.classList.remove('animate-fade-down-out');
+                                    imgElement.classList.add('animate-fade-down-in');
+                                    setTimeout(() => imgElement.classList.remove('animate-fade-down-in'), 600);
+                                };
+                            }, 600);
+                            imagesInUse[slotIndexToReplace] = newImageSrc;
+                            availableImages.splice(newImageIndex, 1);
+                            if (oldImageSrc) availableImages.push(oldImageSrc);
+                        }, 4000);
+                    }
+                }
+            };
+            
+            // --- Intersection Observer para Carga Diferida ---
+            const galleryObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        initGalleries();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            galleryObserver.observe(gallerySection);
         });
     </script>
 </body>
